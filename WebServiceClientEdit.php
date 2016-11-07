@@ -16,14 +16,14 @@
 	// FOR CALL NUSOAP
 	require("lib/nusoap.php");
 ?>
-<input type="button" id="BACK" value="BACK" onclick="location.href = 'http://ec2-35-160-44-121.us-west-2.compute.amazonaws.com/topic2/index.html';" class="btn btn-default"/>
+<input type="button" id="BACK" value="BACK" onclick="location.href = 'http://ec2-35-162-94-104.us-west-2.compute.amazonaws.com/topic2/index.html';" class="btn btn-default"/>
 <!-- EDIT SERVICE -->
 <h1> Edit Book By Name Service </h1>
 <?php
   	if($_POST['submit_edit'] == "Submit") {
 		$from_name=$_POST['from_name'];
 		$to_name=$_POST['to_name'];
-        $client = new nusoap_client("http://ec2-35-160-44-121.us-west-2.compute.amazonaws.com/topic2/WebServiceServer.php?wsdl",true); 
+        $client = new nusoap_client("http://ec2-35-162-94-104.us-west-2.compute.amazonaws.com/topic2/WebServiceServer.php?wsdl",true); 
         $params = array(
 			'from_name'=>$from_name,
 			'to_name'=>$to_name
