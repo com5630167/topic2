@@ -22,13 +22,13 @@
 ?>
 
 <!-- DELETE SERVICE -->
-<input type="button" id="BACK" value="BACK" onclick="location.href = 'http://ec2-35-161-234-98.us-west-2.compute.amazonaws.com/topic2/index.html';" class="btn btn-default"/>
+<input type="button" id="BACK" value="BACK" onclick="location.href = 'http://ec2-35-160-44-121.us-west-2.compute.amazonaws.com/topic2/index.html';" class="btn btn-default"/>
 <h1> Delete Book By Name Service </h1>
 <h2><font color="red">CAUTION ! IT WILL BE DELETE NODE IN XML FILE.</font></h2>
 <?php
   	if($_POST['submit_delete'] == "Submit") {
 		$mark_name=$_POST['mark_name'];
-        $client = new nusoap_client("http://ec2-35-161-234-98.us-west-2.compute.amazonaws.com/topic2/WebServiceServer.php?wsdl",true); 
+        $client = new nusoap_client("http://ec2-35-160-44-121.us-west-2.compute.amazonaws.com/topic2/WebServiceServer.php?wsdl",true); 
         $params = array('mark_name'=>$mark_name);
         $data = $client->call("DeleteXML",$params); 
         echo $data;

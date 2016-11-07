@@ -8,7 +8,7 @@
   <body background ="background.jpg">
   <br>
   <center><h1> Search Book </h1></center>
-  <input type="button" id="BACK" value="BACK" onclick="location.href = 'http://ec2-35-161-234-98.us-west-2.compute.amazonaws.com/topic2/index.html';" class="btn btn-default"/>
+  <input type="button" id="BACK" value="BACK" onclick="location.href = 'http://ec2-35-160-44-121.us-west-2.compute.amazonaws.com/topic2/index.html';" class="btn btn-default"/>
 
   <div align="right">
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    	} else {
       $searchK = $_POST["key"];
    	}
-   	$client = new nusoap_client("http://ec2-35-161-234-98.us-west-2.compute.amazonaws.com/topic2/WebServiceServer.php?wsdl");
+   	$client = new nusoap_client("http://ec2-35-160-44-121.us-west-2.compute.amazonaws.com/topic2/WebServiceServer.php?wsdl");
 	  $result = $client->call("findBook", array("keyword" => "$searchK"));
     echo "<h2>Result</h2>";
     echo "keyword : $searchK <br><br>";
